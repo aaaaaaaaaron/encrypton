@@ -6,6 +6,8 @@ I am working on seeing how easy it is to create this popular hack. I am still ju
 
 
 ## How to run:
-Clone this repo
-Change the directory.
-Run the python files.
+1.) Clone this repo.
+
+2.) Change the directory.
+
+3.) Run the python files.
