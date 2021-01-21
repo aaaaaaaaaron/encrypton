@@ -17,7 +17,7 @@ def encrypt(filename, key):
     # encrypt data
     encrypted_data = f.encrypt(file_data)
     # write the encrypted file
-    with open(filename, "wb") as file:  # write to SAME FILE to overwride. nice.
+    with open(filename, "wb") as file:  # write to SAME FILE to override. nice.
         file.write(encrypted_data)
 
 if __name__=="__main__":

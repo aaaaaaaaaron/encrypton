@@ -8,13 +8,13 @@ https://stackabuse.com/introduction-to-python-os-module/
 from path_encrypt import *
 
 def encrypt_tree(directory, key):
-    for file in os.listdir(directory):
+    for file in os.listdir(directory):  # looks at everything in given directory
         filename = os.fsdecode(file)
-        fullpath = os.path.join(directory.decode(), filename)
-        if os.path.isdir(fullpath):
+        fullpath = os.path.join(directory.decode(), filename)  # turns it into a readable path
+        if os.path.isdir(fullpath):  # if it is a folder ("directory")
             print(fullpath)
-            encrypt_tree(os.fsencode(fullpath), key) # I might be able to get rid of the redundant encoding.
-    encrypt_dir(directory, key)
+            encrypt_tree(os.fsencode(fullpath), key)  # recursive step
+    encrypt_dir(directory, key)  # now that its at the bottom of the "tree" it encrypts the directory
 
 
 

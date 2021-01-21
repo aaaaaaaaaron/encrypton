@@ -13,8 +13,8 @@ def decrypt_tree(directory, key):
         fullpath = os.path.join(directory.decode(), filename)
         if os.path.isdir(fullpath):
             print(fullpath)
-            decrypt_tree(os.fsencode(fullpath), key) # I might be able to get rid of the redundant encoding.
-    encrypt_dir(directory, key)
+            decrypt_tree(os.fsencode(fullpath), key)  # I might be able to get rid of the redundant encoding.
+    decrypt_dir(directory, key)
 
 
 
